@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    /**
+     * JavaScript test
+     */
+    const checkcount = () => {
+        console.log("here")
+        const inputs = document.getElementsByClassName("hobby");
+        const filter_input = new Array();
+        for(let i = 0; i < inputs.length;i++){
+            inputs[i].checked ? filter_input.push(inputs[i].value) : false
+        }
+        if(!filter_input.length){
+            alert("Hobby not selected!");
+        }
+    }
+
+</script>
+
+<!-- onsubmit -> submit 하기 전에 실행할 함수이다. -->
+<form name="form1" method="post" action="view5.php" onsubmit="checkcount()">
+    <h3>What's your hobby?</h3>
+    <ul>
+        <!-- 중복선택이 가능하도록 name 속성은 배열로 설정한다. -->
+        <!-- 이렇게 하면 연관 배열 형태로 사용할 수 있다. -->
+        <!-- 하나만 선택을 하기 위해서는 radio, 여러개를 선택하기 위해서는 checkbox-->
+        <li>영화감상 <input class="hobby" type="checkbox" name="data[hobby][]" value="영화감상"></li>
+        <li>맛집탐장 <input class="hobby" type="checkbox" name="data[hobby][]" value="맛집탐방"></li>
+        <li>독서 <input class="hobby" type="checkbox" name="data[hobby][]" value="독서"></li>
+        <li>요가 <input class="hobby" type="checkbox" name="data[hobby][]" value="요가"></li>
+    </ul>
+    <h3>What country are you come from?</h3>
+    <ul>
+        <li>Korea <input type="radio" name="country" value="Korea" required></li>
+        <li>Japan <input type="radio" name="country" value="Japan"></li>
+        <li>USA <input type="radio" name="country" value="USA"></li>
+    </ul>
+    <ul>
+        <li><input type="submit" value="check"></li>
+    </ul>
+</form>
+
+</body>
+</html>

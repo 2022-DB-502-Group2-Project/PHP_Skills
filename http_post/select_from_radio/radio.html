@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form name="form1" method="post" action="view4.php">
+    <ul>
+        <li>
+            <!-- 동일한 name의 radiobutton type에 대해 required를 정의하면, 동일한 내용의 name은 최소 하나 이상 선택되어야 한다. -->
+            성별 : 남성 <input type="radio" name="gender" value="남" required>
+            여성 <input type="radio" name="gender" value="여">
+        </li>
+        <li>
+            이메일 : 수신 <input type="radio" name="email" value="예" required>
+            비수신 <input type="radio" name="email" value="아니오">
+        </li>
+        <li><input type="submit" value="확인"></li>
+    </ul>
+</form>
+
+</body>
+</html>
