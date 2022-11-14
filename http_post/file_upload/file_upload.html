@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--
+파일 업로드를 하기 위해서는 <form> 태그의 enctype 속성을 multipart/form-data로 지정해 주어야 한다
+input 태그의 type 속성 또한 file로 지정해 주어야 한다
+
+-->
+
+<form name="form1" method="post" action="view8.php" enctype="multipart/form-data">
+    <ul>
+        <!-- Multiple file upload testing -->
+        <li>Image 1 upload : <input type="file" name="upload[]"></li><br>
+        <li>Image 2 upload : <input type="file" name="upload[]"></li>
+        <li>Description : <textarea name="comment" rows="3" cols="60"></textarea> </li>
+        <li><input type="submit" value="check"></li>
+    </ul>
+
+
+</form>
+
+</body>
+</html>

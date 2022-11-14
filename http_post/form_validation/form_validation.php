@@ -19,7 +19,8 @@ if(strtolower($_SERVER['REQUEST_METHOD']) == "post"){
 
     $name = !empty($_POST["name"]) ? $_POST["name"] : "name not typed";
     $gender = !empty($_POST["gender"]) ? $_POST["gender"] : "gender not typed";
-    $email = !empty($_POST["email"]) ? $_POST["email"] : "email not entered";
+    // filter var 적용해보기
+    $email = !filter_var($_POST["email"],FILTER_VALIDATE_EMAIL) ? $_POST["email"] : "email not entered";
     $interest = !empty($_POST["interest"]) ? join(", ",$_POST["interest"]) : "No other interest selected";
 
     /**
