@@ -1,5 +1,4 @@
 <?php
-
 $table = $_GET['table'];
 $type = $_GET['type'];
 
@@ -16,5 +15,4 @@ if ($type == "list"){
 }
 
 echo $boardtitle." | ".$typetitle;
-
 ?>
